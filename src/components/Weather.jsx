@@ -61,18 +61,15 @@ const Weather = () => {
     }
   };
 
-  useEffect(() => {
-    search("New York");
-  }, []);
   return (
     <div className="weather">
       <div className="search-bar">
-        <input ref={inputRef} type="text" placeholder="Search" onSubmit={() => search(inputRef.current.value)}/>
+        <input ref={inputRef} type="text" placeholder="Search" />
           <img
             src={search_icon}
             alt=""
             onClick={() => search(inputRef.current.value)}
-            onSubmit={() => search(inputRef.current.value)}
+            
           />
       </div>
       {weatherData ? (
